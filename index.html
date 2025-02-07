@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostra</title>
+    <!--tailwind css cdn link-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--css stylesheet link-->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!--ad block-->
+    <div id="adblock" class=" bg-black text-white p-3 text-lg hidden md:flex">
+        <p class="items-center px-96 cursor-pointer">Sign Up and <strong> GET 20% OFF </strong> for your first Order</p>
+        <button id="btn" class="cursor-pointer"><strong>X</button></p>
+    </div>
+    <!--navbar-->
+    <nav class=" flex p-5  rounded items-center justify-between sticky bg-white top-0 z-30 shadow-xl">
+        <h1 class="font-bold text-2xl">Nostra</h1>
+        <div class="text-3xl cursor-pointer   md:hidden" onclick="toggleMenu()">&#9776;</div>
+        <div class="sidebar w-60 h-full fixed top-0 -left-60 bg-black pt-12 md:hidden" id="sidebar">
+            <div class="close-btn absolute top-3 right-5 text-2xl cursor-pointer text-white" onclick="toggleMenu()">&#10005;</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#Arrival">New Arrival</a></li>
+                <li><a href="#Wanted">Most Wanted</a></li>
+                <li><a href="collect.html">Collections</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+            <ul class="gap-20 text-gray-600 hidden md:flex">
+                <li>
+                    <a class="hover:underline hover:text-black" href="index.html">Home</a>
+                </li>
+                <li>
+                    <a class="hover:underline hover:text-black" href="#Arrival">New Arrival</a>
+                </li>
+                <li>
+                    <a class="hover:underline hover:text-black" href="#Wanted">Most Wanted</a>
+                </li>
+                <li>
+                    <a class="hover:underline hover:text-black" href="collect.html">Collection</a>
+                </li>
+                <li>
+                    <a class="hover:underline  hover:text-black" href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+    </nav>
+    <!--poster section-->
+    <div class="bg-gray-100 p-6">
+        <!-- Horizontal Scroll Section -->
+        <div class="overflow-x-auto whitespace-nowrap py-4 relative">
+            <!-- Scrollable Images Container -->
+            <div class="poster relative flex">
+                <!-- Image Cards -->
+                <div class="bg-gray-300 rounded-lg shadow-md overflow-hidden">
+                    <img class=" object-cover rounded" src="./images/img1.jpg">
+                </div>
+                <div class="bg-gray-300 rounded-lg shadow-md overflow-hidden">
+                    <img class=" object-cover rounded" src="./images/img2.jpg">
+                </div>
+                <div class="bg-gray-300 rounded-lg shadow-md overflow-hidden">
+                    <img class=" object-cover rounded" src="./images/img3.jpg">
+                </div>
+                <div class="bg-gray-300 rounded-lg shadow-md overflow-hidden">
+                    <img class=" object-cover rounded" src="./images/img4.jpg">
+                </div>
+                <div class="bg-gray-300 rounded-lg shadow-md overflow-hidden">
+                    <img class=" object-cover rounded" src="./images/img5.jpg">
+                </div>
+                <div class="bg-gray-300 rounded-lg shadow-md overflow-hidden">
+                    <img class=" object-cover rounded" src="./images/img6.jpg">
+                </div>
+                <div class="bg-gray-300 rounded-lg shadow-md overflow-hidden">
+                    <img class=" object-cover rounded" src="./images/img7.jpg">
+                </div>
+                <div class="bg-gray-300 rounded-lg shadow-md overflow-hidden">
+                    <img class=" object-cover rounded" src="./images/img8.jpg">
+                </div>
+                <div class="bg-gray-300 rounded-lg shadow-md overflow-hidden">
+                    <img class="object-cover rounded" src="./images/img9.jpg">
+                </div>
+            </div>
+
+            <!-- Overlay Text -->
+            <div class="absolute inset-0 flex flex-col justify-center items-center text-center">
+                <h1 class="font-bold text-5xl text-white">Level up your style with our</h1>
+                <p class="text-xl text-white mt-2">Summer Collections</p>
+                <button class="bg-white py-3 px-5 text-black rounded mt-3">Shop now →</button>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="absolute inset-0 flex justify-between items-center px-5">
+                <button class="bg-gray-900 bg-opacity-50 text-white text-5xl px-5 py-2 rounded-full">&#10094;</button>
+                <button class="bg-gray-900 bg-opacity-50 text-white text-5xl px-5 py-2 rounded-full">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!--brands logos-->
+    <div class="p-3">
+        <h1 class="font-bold text-3xl mt-10">Brands</h1>
+        <ul
+            class="brands text-2xl justify-between grid grid-cols-3 md:grid-cols-6 gap-5 items-center text-center font-bold mt-4">
+            <li>
+                <img src="./images/Puma1.webp">
+                <p>PUMA</p>
+            </li>
+            <li>
+                <img src="./images/adidas2.webp">
+                <p>ADIDAS</p>
+            </li>
+            <li>
+                <img src="./images/Nike3.webp">
+                <p>NIKE</p>
+            </li>
+            <li>
+                <img src="./images/locoste4.webp">
+                <p>LOCOSTE</p>
+            </li>
+            <li>
+                <img src="./images/Supreme5.webp">
+                <p>SUPREME</p>
+            </li>
+            <li>
+                <img src="./images/Vans6.webp">
+                <p>VANS</p>
+            </li>
+        </ul>
+    </div>
+    </div>
+    <!--customer experience-->
+    <section class="flex justify-between mt-6 text-center py-5 text-lg md:text-4xl items-center  ">
+        <h2 class="font-bold ">We Provide Best Customer Experience</h2>
+        <p> || We ensure that our Customer have the best shopping experience</p>
+    </section>
+    <!--speciality-->
+    <div>
+        <ul class="p-3 grid grid-cols-2 mt-5 md:grid-cols-4 gap-6">
+            <li class="bg-gray-300 border p-2 rounded">
+                <i class="fa-regular fa-circle-check font-bold text-4xl" style="color: #000000;"></i>
+                <p class="font-bold text-xl mt-2">Original Products</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!</p>
+            </li>
+            <li class="bg-gray-300 border p-2 rounded">
+                <i class="fa-regular fa-face-smile font-bold text-4xl" style="color: #000000;"></i>
+                <p class="font-bold text-xl mt-2">Satisfaction Guarantee</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!</p>
+            </li>
+            <li class="bg-gray-300 border p-2 rounded">
+                <i class="fa-solid fa-box-archive font-bold text-4xl" style="color: #000000;"></i>
+                <p class="font-bold text-xl mt-2">New Arrival Everyday</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!</p>
+            </li>
+            <li class="bg-gray-300 border p-2 rounded">
+                <i class="fa-solid fa-truck-fast font-bold text-4xl" style="color: #000000;"></i>
+                <p class="font-bold text-xl mt-2">Fast & Free Shipping</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!</p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- New Arrivals Section -->
+    <section id="Arrival" class="p-3 mt-10">
+        <h2 class="text-3xl font-bold mb-4">New Arrivals</h2>
+        <div class="newarrivals grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="relative group">
+                <!--image1-->
+                <img src="./images/shirt1.jpg" alt="Shirt" class="w-full rounded-lg shadow-md">
+                <button
+                    class="absolute inset-0 bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center text-sm font-semibold py-2 px-4 rounded-lg">
+                    Shop Now →
+                </button>
+            </div>
+            <!--image-->
+            <div class="relative group">
+                <img src="./images/shorts2.png" alt="Pants" class="w-full rounded-lg shadow-md">
+                <button
+                    class="absolute inset-0 bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center text-sm font-semibold py-2 px-4 rounded-lg">
+                    Shop Now →
+                </button>
+            </div>
+            <!--image3-->
+            <div class="relative group">
+                <img src="./images/denim jacket3.jpg" alt="Shirt" class="w-full rounded-lg shadow-md">
+                <button
+                    class="absolute inset-0 bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center text-sm font-semibold py-2 px-4 rounded-lg">
+                    Shop Now →
+                </button>
+            </div>
+            <!--image4-->
+            <div class="relative group">
+                <img src="./images/formal4.jpg" alt="Jacket" class="w-full rounded-lg shadow-md">
+                <button
+                    class="absolute inset-0 bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center text-sm font-semibold py-2 px-4 rounded-lg">
+                    Shop Now →
+                </button>
+            </div>
+        </div>
+    </section>
+    <!--most wanted scroll images -->
+    <div id="Wanted" class="bg-gray-100 p-6">
+
+        <!-- Horizontal Scroll Section -->
+        <h2 class="text-3xl font-bold mb-4">Most Wanted</h2>
+        <div class="overflow-x-auto whitespace-nowrap py-4">
+
+            <!-- Scrollable Images Container -->
+            <div class="flex space-x-4">
+
+                <!-- Image 1 -->
+                <div class="relative min-w-[200px] h-[250px] bg-gray-300 rounded-lg shadow-md overflow-hidden">
+                    <img src="./images/fs1.jpg" alt="Product 1" class="w-full h-full object-cover">
+                    <span
+                        class="absolute top-0  bg-red-600  text-white  left-8 transform -translate-x-1/2 px-4 py-1 rounded-md shadow-md">
+                        Sale
+                    </span>
+                    <button class="absolute bottom-1 right-2 text-black text-5xl ">♡</button>
+                </div>
+
+                <!-- Image 2 -->
+                <div class="relative min-w-[200px] h-[250px] bg-gray-300 rounded-lg shadow-md overflow-hidden">
+                    <img src="./images/fs2.webp" alt="Product 1" class="w-full h-full object-cover">
+                    <span
+                        class="absolute top-0  bg-red-600  text-white  left-8 transform -translate-x-1/2 px-4 py-1 rounded-md shadow-md">
+                        Sale
+                    </span>
+                    <button class="absolute bottom-1 right-2 text-black text-5xl ">♡</button>
+                </div>
+
+                <!-- Image 3 -->
+                <div class="relative min-w-[200px] h-[250px] bg-gray-300 rounded-lg shadow-md overflow-hidden">
+                    <img src="./images/fs3.jpg" alt="Product 1" class="w-full h-full object-cover">
+                    <span
+                        class="absolute top-0  bg-red-600  text-white  left-8 transform -translate-x-1/2 px-4 py-1 rounded-md shadow-md">
+                        Sale
+                    </span>
+                    <button class="absolute bottom-1 right-2 text-black text-5xl ">♡</button>
+                </div>
+
+                <!-- Image 4 -->
+                <div class="relative min-w-[200px] h-[250px] bg-gray-300 rounded-lg shadow-md overflow-hidden">
+                    <img src="./images/fs4.jpg" alt="Product 1" class="w-full h-full object-cover">
+                    <span
+                        class="absolute top-0  bg-red-600  text-white  left-8 transform -translate-x-1/2 px-4 py-1 rounded-md shadow-md">
+                        Sale
+                    </span>
+                    <button class="absolute bottom-1 right-2 text-black text-5xl ">♡</button>
+                </div>
+
+                <!-- Image 5 -->
+                <div class="relative min-w-[200px] h-[250px] bg-gray-300 rounded-lg shadow-md overflow-hidden">
+                    <img src="./images/fs5.jpg" alt="Product 1" class="w-full h-full object-cover">
+                    <span
+                        class="absolute top-0  bg-red-600  text-white  left-8 transform -translate-x-1/2 px-4 py-1 rounded-md shadow-md">
+                        Sale
+                    </span>
+                    <button class="absolute bottom-1 right-2 text-black text-5xl ">♡</button>
+                </div>
+                <!-- Image 6 -->
+                <div class="relative min-w-[200px] h-[250px] bg-gray-300 rounded-lg shadow-md overflow-hidden">
+                    <img src="./images/fs6.webp" alt="Product 1" class="w-full h-full object-cover">
+                    <span
+                        class="absolute top-0  bg-red-600  text-white  left-8 transform -translate-x-1/2 px-4 py-1 rounded-md shadow-md">
+                        Sale
+                    </span>
+                    <button class="absolute bottom-1 right-2 text-black text-5xl ">♡</button>
+                </div>
+                <!-- Image 7 -->
+                <div class="relative min-w-[200px] h-[250px] bg-gray-300 rounded-lg shadow-md overflow-hidden">
+                    <img src="./images/fs7.jpg" alt="Product 1" class="w-full h-full object-cover">
+                    <span
+                        class="absolute top-0  bg-red-600  text-white  left-8 transform -translate-x-1/2 px-4 py-1 rounded-md shadow-md">
+                        Sale
+                    </span>
+                    <button class="absolute bottom-1 right-2 text-black text-5xl ">♡</button>
+                </div>
+                <!-- Image 8 -->
+                <div class="relative min-w-[200px] h-[250px] bg-gray-300 rounded-lg shadow-md overflow-hidden">
+                    <img src="./images/fs8.jpg" alt="Product 1" class="w-full h-full object-cover">
+                    <span
+                        class="absolute top-0  bg-red-600  text-white  left-8 transform -translate-x-1/2 px-4 py-1 rounded-md shadow-md">
+                        Sale
+                    </span>
+                    <button class="absolute bottom-1 right-2 text-black text-5xl ">♡</button>
+                </div>
+                <!-- Image 9 -->
+                <div class="relative min-w-[200px] h-[250px] bg-gray-300 rounded-lg shadow-md overflow-hidden">
+                    <img src="./images/shirt1.jpg" alt="Product 1" class="w-full h-full object-cover">
+                    <span
+                        class="absolute top-0  bg-red-600  text-white  left-8 transform -translate-x-1/2 px-4 py-1 rounded-md shadow-md">
+                        Sale
+                    </span>
+                    <button class="absolute bottom-1 right-2 text-black text-5xl ">♡</button>
+                </div>
+                <!-- Image 10 -->
+                <div class="relative min-w-[200px] h-[250px] bg-gray-300 rounded-lg shadow-md overflow-hidden">
+                    <img src="./images/denim jacket3.jpg" alt="Product 1" class="w-full h-full object-cover">
+                    <span
+                        class="absolute top-0  bg-red-600  text-white  left-8 transform -translate-x-1/2 px-4 py-1 rounded-md shadow-md">
+                        Sale
+                    </span>
+                    <button class="absolute bottom-1 right-2 text-black text-5xl ">♡</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--poster block-->
+    <section class="p-3">
+        <ul class="postertwo  grid grid-cols-2 relative justify-between items-center text-white bg-black rounded-xl">
+            <li>
+                <img class="p-3" src="./images/poster1.jpg">
+            </li>
+            <li>
+                <h1 class="text-2xl font-bold md:text-4xl">Limited Offer</h1>
+                <p class="text-xl font-normal md:text-3xl">70% OFF on this for the first 30 Customer</p>
+                <button class="bg-white py-3 mt-3 px-5 text-black rounded">Shop now→</button>
+            </li>
+        </ul>
+    </section>
+    <!--Join section-->
+    <section class="p-4 text-center">
+        <h1 class="font-bold mt-5 text-3xl">Join our News Letter</h1>
+        <div>
+            <p class="mt-3">Signup for our Email newspaper to get exclusive discounts,updates and more</p>
+            <input class="border border-black m-3 p-2" style="width: 80%;" type="email"
+                placeholder="Enter your Mail Id"><br>
+            <button class="bg-black text-white underline mt-3 p-2 rounded-sm">Subscribe</button>
+        </div>
+    </section>
+    <!--Footer-->
+    <section class="p-4 mt-10 bg-black text-white rounded-lg">
+        <h1 class="font-bold mt-5 text-4xl">Nostra</h1>
+        <p class="mt-3">The Standard chunk of Lorem used since the 1500's is reprodused below for those interest</p>
+        <div class="text-5xl mt-5">
+            <i class="fa-brands fa-square-facebook" style="color: #ffffff;"></i>
+            <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+            <i class="fa-brands fa-twitter" style="color: #ffffff;"></i>
+        </div>
+        <p class="mt-3 ">&copy; 2021 Nostra.com</p>
+    </section>
+    <script>
+        var btn = document.getElementById("btn")
+var adblock = document.getElementById("adblock")
+btn.addEventListener("click", function () {
+    adblock.remove()
+})
+function toggleMenu() {
+        document.getElementById("sidebar").classList.toggle("active");
+    }
+    </script>
+</body>
+</html>

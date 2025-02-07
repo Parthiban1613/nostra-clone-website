@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostra - Online Store</title>
+      <!--tailwind css cdn link-->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+      <!--google fonts-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link
+          href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+          rel="stylesheet">
+      <!--font awesome cdn link-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <!--css stylesheet link-->
+      <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-100">
+    <script src="script.js"></script>
+        <!--navbar-->
+        <nav class=" flex p-5  rounded items-center justify-between sticky bg-white top-0 z-30 shadow-xl">
+            <h1 class="font-bold text-2xl">Nostra</h1>
+            <div class="text-3xl cursor-pointer   md:hidden" onclick="toggleMenu()">&#9776;</div>
+        <div class="sidebar w-60 h-full fixed top-0 -left-60 bg-black pt-12" id="sidebar">
+            <div class="close-btn absolute top-3 right-5 text-2xl cursor-pointer text-white" onclick="toggleMenu()">&#10005;</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#Arrival">New Arrival</a></li>
+                <li><a href="#Wanted">Most Wanted</a></li>
+                <li><a href="collect.html">Collections</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    
+            <ul class="gap-20 text-gray-600 hidden md:flex">
+                <li>
+                    <a class="hover:underline hover:text-black" href="index.html">Home</a>
+                </li>
+                <li>
+                    <a class="hover:underline hover:text-black" href="#">New Arrival</a>
+                </li>
+                <li>
+                    <a class="hover:underline hover:text-black" href="#">Most Wanted</a>
+                </li>
+                <li>
+                    <a class="hover:underline hover:text-black" href="collect.html">Collection</a>
+                </li>
+                <li>
+                    <a class="hover:underline  hover:text-black" href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+
+    <div class="flex mt-6">
+        <!-- Sidebar Filters -->
+        <div class="w-1/4 p-4 bg-white border-r-2 border-black">
+            <h2 class="text-2xl font-bold mb-4 md:text-4xl">Occasion</h2>
+            <div class="font-medium text-lg md:text-2xl">
+                <label class="block"><input type="checkbox" class="mr-2">Summer</label>
+                <label class="block"><input type="checkbox" class="mr-2">Party</label>
+                <label class="block"><input type="checkbox" class="mr-2">Beach</label>
+            </div>
+
+            <h2 class="text-2xl font-bold mt-6 mb-4 md:text-4xl">Colors</h2>
+            <div class="font-medium text-lg md:text-2xl">
+                <label class="block"><input type="checkbox" class="mr-2">Red</label>
+                <label class="block"><input type="checkbox" class="mr-2">Blue</label>
+                <label class="block"><input type="checkbox" class="mr-2">White</label>
+                <label class="block"><input type="checkbox" class="mr-2">Green</label>
+            </div>
+
+            <h2 class="text-2xl font-bold mt-6 mb-4 md:text-4xl">Size</h2>
+            <div class="font-medium text-lg md:text-2xl">
+                <label class="block"><input type="checkbox" class="mr-2">Small</label>
+                <label class="block"><input type="checkbox" class="mr-2">Medium</label>
+                <label class="block"><input type="checkbox" class="mr-2">Large</label>
+                <label class="block"><input type="checkbox" class="mr-2">X-Large</label>
+            </div>
+        </div>
+
+        <!-- Products Section -->
+        <div class="w-3/4 p-4">
+            <!-- Search Bar -->
+            <div class="mb-6 relative items-center justify-between">
+                <input type="text" placeholder="Search" class="w-full p-2 border rounded-xl">
+                <i class="fa-solid fa-magnifying-glass absolute right-4 bottom-4" style="color: #000000;"></i>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="four grid grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="bg-white shadow-md p-4 text-center">
+                    <img src="./images/fs1.jpg" alt="Floral Summer Shirt" class="w-full">
+                    <h3 class="font-bold mt-2">Floral Summer Shirt</h3>
+                    <p class="text-gray-600">₹220</p>
+                </div>
+                <div class="bg-white shadow-md p-4 text-center">
+                    <img src="./images/fs2.webp" alt="Summer Green" class="w-full">
+                    <h3 class="font-bold mt-2">Summer Green</h3>
+                    <p class="text-gray-600">₹260</p>
+                </div>
+                <div class="bg-white shadow-md p-4 text-center">
+                    <img src="./images/fs3.jpg" alt="Party Floral Shirt" class="w-full">
+                    <h3 class="font-bold mt-2">Party Floral Shirt</h3>
+                    <p class="text-gray-600">₹399</p>
+                </div>
+                <div class="bg-white shadow-md p-4 text-center">
+                    <img src="./images/fs4.jpg" alt="Floral Summer Shirt" class="w-full">
+                    <h3 class="font-bold mt-2">Floral Summer Shirt</h3>
+                    <p class="text-gray-600">₹220</p>
+                </div>
+                <div class="bg-white shadow-md p-4 text-center">
+                    <img src="./images/fs5.jpg" alt="Summer Green" class="w-full">
+                    <h3 class="font-bold mt-2">Summer Green</h3>
+                    <p class="text-gray-600">₹260</p>
+                </div>
+                <div class="bg-white shadow-md p-4 text-center">
+                    <img src="./images/fs6.webp" alt="Party Floral Shirt" class="w-full">
+                    <h3 class="font-bold mt-2">Party Floral Shirt</h3>
+                    <p class="text-gray-600">₹399</p>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!--Join section-->
+        <section class="p-4 text-center">
+            <h1 class="font-bold mt-5 text-3xl">Join our News Letter</h1>
+            <div>
+                <p class="mt-3">Signup for our Email newspaper to get exclusive discounts,updates and more</p>
+                <input class="border border-black m-3 p-2" style="width: 80%;" type="email"
+                    placeholder="Enter your Mail Id"><br>
+                <button class="bg-black text-white underline mt-3 p-2 rounded-sm">Subscribe</button>
+            </div>
+        </section>
+    </div>
+        <!--Footer-->
+        <section class="p-4 mt-10 bg-black text-white rounded-lg">
+            <h1 class="font-bold mt-5 text-4xl">Nostra</h1>
+            <p class="mt-3">The Standard chunk of Lorem used since the 1500's is reprodused below for those interest
+            </p>
+            <div class="text-5xl mt-5">
+                <i class="fa-brands fa-square-facebook" style="color: #ffffff;"></i>
+                <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+                <i class="fa-brands fa-twitter" style="color: #ffffff;"></i>
+            </div>
+            <p class="mt-3 ">&copy; 2021 Nostra.com</p>
+        </section>
+    </div>
+    </div>
+    <script>
+        var btn = document.getElementById("btn")
+var adblock = document.getElementById("adblock")
+btn.addEventListener("click", function () {
+    adblock.remove()
+})
+function toggleMenu() {
+        document.getElementById("sidebar").classList.toggle("active");
+    }
+    </script>
+</body>
+
+</html>
